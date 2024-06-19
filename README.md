@@ -1,25 +1,38 @@
-# README
+## Movie And Reviews Data Importer with Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails application designed to import movie data from CSV files and provide search and sorting capabilities.
 
-Things you may want to cover:
+**Getting Started:**
 
-* Ruby version
+1. Clone this repository: 
+2. Install dependencies: 
+3. Configure your database 
+4. Run database migrations: `rails db:migrate`
+5. Start the development server: `rails s`
 
-* System dependencies
+**Features:**
 
-* Configuration
+- Imports movie and review data from CSV files (`data/movies.csv` and `data/reviews.csv`).
+- Displays an overview of all movies with title, description, year, director, country, actors and average rating.
+- Provides a search form to filter movies by associated actor name.
+- Sorts the movie overview by average rating (ascending or descending).
 
-* Database creation
+**Data Import:**
 
-* Database initialization
+- You can import data by running the movies or reviews task:
+`rails import:movies`
+`rails import:review`
+- It's best to run the commands in that same order.
 
-* How to run the test suite
+**Search and Sort:**
 
-* Services (job queues, cache servers, search engines, etc.)
+- The search form allows users to filter movies by associated actor name.
+- The movie overview can be sorted by average rating (ascending or descending) using efficient techniques like database-side aggregations.
 
-* Deployment instructions
+**Further Development:**
 
-* ...
-# movie_mania
+- Enhance the search functionality
+- Implement pagination for large datasets.
+- Add user authentication and authorization for managing movie data.
+- Explore advanced data processing techniques for improved performance
+
